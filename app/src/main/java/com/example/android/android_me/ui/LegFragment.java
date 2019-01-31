@@ -13,7 +13,7 @@ import com.example.android.android_me.data.AndroidImageAssets;
 
 import java.util.List;
 
-public class HeaderFragment extends Fragment {
+public class LegFragment extends Fragment {
 
     //a variable of the index of an image in the list
     private int mImageListIndex;
@@ -21,8 +21,7 @@ public class HeaderFragment extends Fragment {
     //a variable of a list of images ids
     private List<Integer> mImageIds;
 
-    public HeaderFragment(){
-        //set the defult values
+    public LegFragment(){
         mImageListIndex=0;
         mImageIds=null;
     }
@@ -30,10 +29,10 @@ public class HeaderFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View viewRoot=inflater.inflate(R.layout.fragment_head, container, false);
-        ImageView headerPartImageView=(ImageView) viewRoot.findViewById(R.id.image_view_head);
+        View viewRoot=inflater.inflate(R.layout.fragment_leg, container, false);
+        ImageView headerPartImageView=(ImageView) viewRoot.findViewById(R.id.image_view_leg);
 
-        headerPartImageView.setImageResource(AndroidImageAssets.getHeads().get(mImageListIndex));
+        headerPartImageView.setImageResource(AndroidImageAssets.getLegs().get(mImageListIndex));
 
         return viewRoot;
     }
@@ -45,4 +44,5 @@ public class HeaderFragment extends Fragment {
     public void setimageIds(List<Integer> imageList){
         mImageIds=imageList;
     }
+
 }
