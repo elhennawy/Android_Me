@@ -31,6 +31,11 @@ public class AndroidMeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_android_me);
 
         HeaderFragment headerPartFragment=new HeaderFragment();
+
+        //set the image id
+        headerPartFragment.setImageId(1);
+
+
         FragmentManager fm=getSupportFragmentManager();
         fm.beginTransaction()
                 .add(R.id.fragment_container, headerPartFragment)
